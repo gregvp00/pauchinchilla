@@ -1,0 +1,39 @@
+{
+  "illustration": [
+    {
+      "src": "/imgPort/Comprimidos/Feefal-thumb.png",
+      "alt": "Imagen 1",
+      "complementary": [
+        "/imgPort/ElfaLlorona.jpeg",
+        "/imgPort/ElfaLlorona.jpeg",
+        "/imgPort/IllustrationPokemon.jpeg"
+      ]
+    },
+    {
+      "src": "/imgPort/Comprimidos/Ekko-thumb.png",
+      "alt": "Imagen 2",
+      "complementary": ["/imgPort/Comprimidos/EkkoFinal.png"]
+    },
+    {
+      "src": "/imgPort/Comprimidos/Dewdrop-thumb.png",
+      "alt": "Imagen 3",
+      "complementary": ["/imgPort/LargartijaDetail1.jpeg"]
+    },
+    {
+      "src": "/imgPort/Comprimidos/Nini-thumb.png",
+      "alt": "Imagen 3",
+      "complementary": ["/imgPort/LargartijaDetail1.jpeg"]
+    },
+    {
+      "src": "/imgPort/Comprimidos/AWF-thumb.png",
+      "alt": "Imagen 3",
+      "complementary": ["/imgPort/LargartijaDetail1.jpeg"]
+    },
+    {
+      "src": "/imgPort/Comprimidos/Labirinthya-thumb.png",
+      "alt": "Imagen 3",
+      "complementary": ["/imgPort/LargartijaDetail1.jpeg"]
+    }
+  ],
+  "3d": []
+}
