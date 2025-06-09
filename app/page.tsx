@@ -1,37 +1,17 @@
 import Nav from "@/components/siteHeader";
-import { AnimatedArticle } from "@/components/animatedArticle";
-import { Carousel } from "@/components/carousel";
 import { Inconsolata } from "next/font/google";
 import ImagesGallery from "@/components/imagesGallery";
+import PixelCarousel from "@/components/pixelCarousel";
 
 const roboto = Inconsolata({ subsets: ["latin"], weight: "400" });
 
 export default function Home() {
   return (
-    <div className={`${roboto.className} bg-[#f0dfc8]`}>
+    <div className={`${roboto.className} bg-white`}>
       <Nav />
-      <div className="pt-24 min-h-[75vh] p-6">
-        <h1 className="text-2xl font-bold mb-4 text-center">What's new</h1>
-        <div className="flex flex-col lg:flex-row gap-6 items-center justify-center">
-          <AnimatedArticle
-            title="asaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
-            description="asd"
-            content={
-              <>
-                <Carousel />
-              </>
-            }
-          />
-          <AnimatedArticle
-            title="Asd"
-            description="asd"
-            content={<Carousel />}
-          />
-        </div>
-      </div>
-
+      <PixelCarousel />
       {/* About Me Section */}
-      <div className="relative bg-[url('/bg-paper.png')] bg-[length:500px_500px] bg-repeat min-h-screen px-6 py-12">
+      <div className="relative bg-[url('/bg-paper.png')] bg-[length:500px_500px] bg-repeat min-h-2/3 px-6 py-12">
         <div className="absolute bg-[url('/bg-paperedge.png')] -top-1.5 bg-[length:1450px_7px] h-[7px] w-full"></div>
         <div
           className="absolute bg-[url('/bg-paperedge.png')] -bottom-1.5 bg-[length:1450px_7px] h-[7px] w-full"
@@ -69,23 +49,11 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="pt-10 bg-[url('/bg-paper.png')] bg-[length:500px_500px] bg-repeat relative overflow-hidden">
-        <div className="absolute inset-0 bg-[#ffba39] opacity-10 pointer-events-none"></div>
-        <div
-          aria-hidden="true"
-          className="absolute inset-0 -top-16 bg-center bg-repeat"
-          style={{
-            backgroundImage: "url('/racoon.svg')",
-            backgroundSize: "100px 100px",
-            opacity: 0.09,
-            pointerEvents: "none", // Para que no interfiera con clicks
-            zIndex: 0,
-          }}
-        />
-        <div style={{ position: "relative", zIndex: 1 }}>
-          <ImagesGallery />
-        </div>
-      </div>
+
+      <h1 id="portfolio" className="text-4xl pt-46 pb-6 px-48">
+        Portfolio
+      </h1>
+      <ImagesGallery />
     </div>
   );
 }

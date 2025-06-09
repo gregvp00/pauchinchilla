@@ -9,7 +9,7 @@ export interface NavItem {
 export const navItems: NavItem[] = [
   {
     label: "Portfolio",
-    href: "/about",
+    href: "#portfolio",
     className: "",
   },
   {

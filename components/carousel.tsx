@@ -12,13 +12,17 @@ import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 
 import { RippleButton } from "./rippleButton";
 
-const items = [
-  { id: 1, content: "Slide 1", color: "bg-red-300" },
-  { id: 2, content: "Slide 2", color: "bg-green-300" },
-  { id: 3, content: "Slide 3", color: "bg-blue-300" },
-];
+interface ItemProps {
+  id: number;
+  content: React.ReactNode;
+  color: string;
+}
 
-export const Carousel = () => {
+interface CarouselProps {
+  items: ItemProps[];
+}
+
+export const Carousel = ({ items }: CarouselProps) => {
   const prevRef = useRef<HTMLButtonElement>(null);
   const nextRef = useRef<HTMLButtonElement>(null);
 
@@ -52,7 +56,7 @@ export const Carousel = () => {
         }}
         className="h-full relative z-10"
       >
-        {items.map((item) => (
+        {items.map((item: ItemProps) => (
           <SwiperSlide key={item.id}>
             <div
               className={`h-64 flex items-center justify-center text-white text-xl font-bold ${item.color}`}

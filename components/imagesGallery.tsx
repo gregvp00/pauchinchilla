@@ -50,21 +50,40 @@ export default function ImagesGallery() {
   };
 
   return (
-    <div
-      className="bg-[url('/bg-paper.png')] border-[#f7f0e5] w-6xl mx-auto p-18 border-5"
-      style={{ boxShadow: "inset 0 0 0 2px #e0d2bd" }}
-    >
-      <h1 className="text-4xl font-extrabold text-center mb-12">Portfolio</h1>
-      <div
-        className="h-3 w-full"
-        style={{
-          backgroundImage:
-            "repeating-linear-gradient(-45deg, #00000040 0 1px, transparent 2px 15px)",
-          opacity: 1,
-        }}
-      ></div>
+    <>
+      <div className="flex flex-col md:flex-row gap-10 pt-10 max-w-[1600px] min-h-screen mx-10">
+        {/* Columna 1: Título "Projects" */}
+        <div className="w-full md:w-1/6">
+          <h2 className="text-xl font-bold">Illustration</h2>
+        </div>
 
-      {renderImages("illustration")}
-    </div>
+        {/* Columna 2: Contenido dividido en texto e imagen */}
+        <div className="w-full md:w-5/6 flex flex-col lg:flex-row gap-6 border-t-1 border-black">
+          {renderImages("illustration")}
+        </div>
+      </div>{" "}
+      <div className="flex flex-col md:flex-row gap-10 pt-10 max-w-[1600px] mx-10">
+        {/* Columna 1: Título "Projects" */}
+        <div className="w-full md:w-1/6">
+          <h2 className="text-xl font-bold">Concept & Visual Development</h2>
+        </div>
+
+        {/* Columna 2: Contenido dividido en texto e imagen */}
+        <div className="w-full md:w-5/6 flex flex-col lg:flex-row gap-6 border-t-1 border-black">
+          {renderImages("conceptdsgn")}
+        </div>
+      </div>{" "}
+      <div className="flex flex-col md:flex-row gap-10 pt-10 max-w-[1600px] mx-10">
+        {/* Columna 1: Título "Projects" */}
+        <div className="w-full md:w-1/6">
+          <h2 className="text-xl font-bold">3D & Lowpoly</h2>
+        </div>
+
+        {/* Columna 2: Contenido dividido en texto e imagen */}
+        <div className="w-full md:w-5/6 flex flex-col lg:flex-row gap-6 border-t-1 border-black">
+          {renderImages("lowpoly3d")}
+        </div>
+      </div>
+    </>
   );
 }
