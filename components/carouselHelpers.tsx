@@ -15,7 +15,7 @@ export function buildImageCarouselItems(
         src={src || "/fallback.jpg"}
         alt={`Slide ${index + 1}`}
         fill
-        style={{ objectFit: "contain" }} // o "cover", según prefieras
+        style={{ objectFit: "cover" }} // o "cover", según prefieras
         sizes="(max-width: 768px) 100vw, 50vw"
         priority={index === 0}
       />
