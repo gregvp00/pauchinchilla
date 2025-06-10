@@ -65,7 +65,7 @@ export const AnimatedArticle = ({
       transition={{ duration: 0.5, delay }}
       onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
-      className="relative dark:bg-zinc-900 p-7 bg-[url('/bg-paper.png')] border-[#f7f0e5] border-5 bg-[length:500px_500px] bg-repeat shadow-md hover:shadow-xl transition-shadow duration-300 "
+      className="relative dark:bg-zinc-900 py-7 px-12 bg-[url('/bg-paper.png')] border-[#f7f0e5] border-5 bg-[length:500px_500px] bg-repeat shadow-md hover:shadow-xl transition-shadow duration-300 "
       style={{ boxShadow: "inset 0 0 0 2px #e0d2bd" }}
     >
       <h2 className="text-xl font-semibold mb-1">{title}</h2>

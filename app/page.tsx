@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <div className={`${roboto.className} bg-white`}>
       <Nav />
-      <div className="relative lg:h-[85vh]">
+      <div className="relative">
         <PixelCarousel />
       </div>
       {/* About Me Section */}

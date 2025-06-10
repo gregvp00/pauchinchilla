@@ -28,7 +28,7 @@ export const Carousel = ({ items }: CarouselProps) => {
   const nextRef = useRef<HTMLButtonElement>(null);
 
   return (
-    <div className="relative max-w-lg mx-auto h-64">
+    <div className="relative w-full max-w-sm mx-auto">
       {/* Swiper */}
       <Swiper
         modules={[Navigation, Pagination]}
@@ -61,7 +61,7 @@ export const Carousel = ({ items }: CarouselProps) => {
         {items.map((item: ItemProps) => (
           <SwiperSlide key={item.id}>
             <div
-              className={`h-64 w-full relative flex items-center justify-center overflow-hidden ${item.color}`}
+              className={`relative w-full aspect-square flex items-center justify-center overflow-hidden ${item.color}`}
             >
               {item.content}
             </div>
