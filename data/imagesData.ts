@@ -171,12 +171,9 @@ const imagesData: ImagesData = {
       ],
     },
     {
-      src: "/comp/beach-thumb.jpg",
+      src: "/3dlowpoly/beach/0Final.gif",
       alt: "Beach",
-      complementary: [
-        "/3dlowpoly/beach/0Final.gif",
-        "/3dlowpoly/beach/0062.png",
-      ],
+      complementary: ["/3dlowpoly/beach/0062.png"],
     },
     {
       src: "/comp/space-thumb.jpg",
@@ -184,9 +181,9 @@ const imagesData: ImagesData = {
       complementary: ["/3dlowpoly/space/0062.png"],
     },
     {
-      src: "/comp/racoon-thumb.jpg",
+      src: "/3dlowpoly/racoon/Final Project.gif",
       alt: "Racoon",
-      complementary: ["/3dlowpoly/racoon/Final Project.gif"],
+      complementary: [],
     },
     {
       src: "/comp/moon-thumb.jpg",
