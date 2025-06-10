@@ -2,6 +2,7 @@ import Nav from "@/components/siteHeader";
 import { Inconsolata } from "next/font/google";
 import ImagesGallery from "@/components/imagesGallery";
 import PixelCarousel from "@/components/pixelCarousel";
+import Image from "next/image"; // <-- Importar Image
 
 const roboto = Inconsolata({ subsets: ["latin"], weight: "400" });
 
@@ -24,17 +25,22 @@ export default function Home() {
           {/* Imagen con fondo de marco pixelado */}
           <div className="w-64 lg:w-72 relative aspect-square flex items-center justify-center">
             {/* Imagen de ElfaLlorona como fondo */}
-            <img
+            <Image
               src="/ElfaLlorona.png"
               alt="Elfa Llorona"
               className="w-3/4 h-3/4 object-cover rounded-md z-0"
+              width={288} // 3/4 de 384 (w-64 lg:w-72 ≈ 256-288px)
+              height={288}
+              priority
             />
 
             {/* Marco pixelado encima */}
-            <img
+            <Image
               src="/pixel-portrait.png"
               alt="Pixel Frame"
               className="absolute top-0 left-0 w-full h-full object-contain z-10 pointer-events-none"
+              fill
+              priority
             />
           </div>
 

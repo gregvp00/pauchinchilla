@@ -11,6 +11,7 @@ import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 
 import { RippleButton } from "./rippleButton";
+import Image from "next/image"; // <-- Importar Image
 
 interface ItemProps {
   id: number;
@@ -39,13 +40,14 @@ export const Carousel = ({ items }: CarouselProps) => {
           dynamicBullets: true,
           clickable: true,
         }}
-        navigation={{
-          prevEl: prevRef.current,
-          nextEl: nextRef.current,
-        }}
+        navigation={false} // inicialmente falso, para evitar confusión con true
         onSwiper={(swiper) => {
           setTimeout(() => {
-            if (!swiper.destroyed) {
+            if (
+              !swiper.destroyed &&
+              swiper.params.navigation &&
+              typeof swiper.params.navigation !== "boolean"
+            ) {
               swiper.params.navigation.prevEl = prevRef.current;
               swiper.params.navigation.nextEl = nextRef.current;
               swiper.navigation.destroy();
@@ -115,13 +117,19 @@ export const Carousel = ({ items }: CarouselProps) => {
           { pos: "bottom-left", class: "-bottom-1.5 -left-1.5", rotate: -90 },
           { pos: "bottom-right", class: "-bottom-1.5 -right-1.5", rotate: 180 },
         ].map(({ pos, class: positionClass, rotate }) => (
-          <img
+          <div
             key={pos}
-            src="/pixel-corner.png"
-            alt={`${pos} corner`}
             className={`absolute w-6 h-6 ${positionClass}`}
             style={{ transform: `rotate(${rotate}deg)` }}
-          />
+          >
+            <Image
+              src="/pixel-corner.png"
+              alt={`${pos} corner`}
+              fill
+              style={{ objectFit: "contain" }}
+              priority
+            />
+          </div>
         ))}
       </div>
     </div>

@@ -1,4 +1,13 @@
-import { Slot } from "@radix-ui/react-slot";
-import { motion } from "framer-motion";
+import React from "react";
+import { Slot, SlotProps } from "@radix-ui/react-slot";
+import { motion, MotionProps } from "framer-motion";
 
-export const MotionSlot = motion(Slot);
+type MotionSlotProps = MotionProps & SlotProps;
+
+const MotionSlotComponent = React.forwardRef<HTMLElement, MotionSlotProps>(
+  (props, ref) => <Slot {...props} ref={ref} />
+);
+
+MotionSlotComponent.displayName = "MotionSlot";
+
+export const MotionSlot = motion.create(MotionSlotComponent);

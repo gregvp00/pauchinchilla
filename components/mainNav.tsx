@@ -7,11 +7,16 @@ export default function MainNav() {
   return (
     <div className="hidden gap-2 md:flex items-center">
       {/* Logo SVG */}
-      <Link href="/" passHref>
+      <Link href="/">
         <div
-          className="p-1.5 border-[#f7f0e5] border-2 bg-[#f7f0e5]"
-          style={{ boxShadow: "inset 0 0 0 1px #e0d2bd" }}
+          className="p-2 border-[#f7f0e5] border-2 bg-[#f7f0e5] flex items-center justify-center"
+          style={{
+            boxShadow: "inset 0 0 0 1px #e0d2bd",
+            width: 44,
+            height: 44,
+          }}
         >
+          {/* SVG aquí */}
           <svg
             viewBox="0 0 100 116"
             fill="#229EFF"
@@ -48,21 +53,24 @@ export default function MainNav() {
 
       {/* Botones de navegación animados */}
       {navItems.map((item, index) => (
-        <Link key={index} href={item.href} legacyBehavior>
+        <Link key={index} href={item.href} passHref>
           <MotionSlot
             whileHover={{ scale: 1.08 }}
             whileTap={{ scale: 0.97 }}
-            transition={{ type: "spring", stiffness: 300, damping: 20 }}
-            asChild
+            transition={{ type: "tween", duration: 0.1 }}
+            style={{ display: "inline-block" }}
           >
-            <a>
-              <Button
-                className={`${item.className} text-[#534c43] font-semibold tracking-wide border-[#f7f0e5] border-2 bg-[#f7f0e5] py-6 antialiased rounded-none px-10 hover:bg-[#f7f0e5]`}
-                style={{ boxShadow: "inset 0 0 0 1px #e0d2bd" }}
-              >
-                {item.label}
-              </Button>
-            </a>
+            <Button
+              className={`${item.className} text-[#534c43] font-semibold tracking-wide border-[#f7f0e5] border-2 bg-[#f7f0e5] rounded-none px-8 flex items-center hover:bg-[#f7f0e5] !important`}
+              style={{
+                boxShadow: "inset 0 0 0 1px #e0d2bd",
+                height: 44, // altura fija igual al contenedor del logo
+                paddingTop: 0,
+                paddingBottom: 0,
+              }}
+            >
+              {item.label}
+            </Button>
           </MotionSlot>
         </Link>
       ))}
