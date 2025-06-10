@@ -27,7 +27,7 @@ export default function ImagesGallery() {
   );
 
   return (
-    <div className="pt-24 min-h-[75vh] p-6">
+    <div className="pt-24 p-6 mb-11">
       <h1 className="text-2xl font-bold mb-4 text-center">What&apos;s new</h1>
       <div className="flex flex-col lg:flex-row gap-6 items-center justify-center">
         <AnimatedArticle

@@ -10,7 +10,9 @@ export default function Home() {
   return (
     <div className={`${roboto.className} bg-white`}>
       <Nav />
-      <PixelCarousel />
+      <div className="relative lg:h-[85vh]">
+        <PixelCarousel />
+      </div>
       {/* About Me Section */}
       <div className="relative bg-[url('/bg-paper.png')] bg-[length:500px_500px] bg-repeat min-h-2/3 px-6 py-12">
         <div className="absolute bg-[url('/bg-paperedge.png')] -top-1.5 bg-[length:1450px_7px] h-[7px] w-full"></div>
@@ -45,7 +47,7 @@ export default function Home() {
           </div>
 
           {/* Texto descriptivo */}
-          <div className="w-full md:w-2/3 text-zinc-800 dark:text-zinc-200 text-lg leading-relaxed">
+          <div className="w-2/3 text-zinc-800 dark:text-zinc-200 text-lg leading-relaxed">
             <p>
               Hey there! I&apos;m Paula Chinchilla — 21 years old and powered by
               pixels, colors, and wild ideas.
