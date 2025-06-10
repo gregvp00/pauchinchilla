@@ -39,25 +39,21 @@ export const AnimatedArticle = ({
     {
       pos: "top-left",
       src: "/pixel-frame-tl.png",
-      rotation: 0,
       class: "-top-3 -left-3",
     },
     {
       pos: "top-right",
       src: "/pixel-frame-tr.png",
-      rotation: 90,
       class: "-top-3 -right-3",
     },
     {
       pos: "bottom-left",
       src: "/pixel-frame-bl.png",
-      rotation: -90,
       class: "-bottom-3 -left-3",
     },
     {
       pos: "bottom-right",
       src: "/pixel-frame-br.png",
-      rotation: 180,
       class: "-bottom-3 -right-3",
     },
   ];
@@ -72,13 +68,12 @@ export const AnimatedArticle = ({
       className="relative dark:bg-zinc-900 p-7 bg-[url('/bg-paper.png')] border-[#f7f0e5] border-5 bg-[length:500px_500px] bg-repeat shadow-md hover:shadow-xl transition-shadow duration-300 min-w-[280px]"
       style={{ boxShadow: "inset 0 0 0 2px #e0d2bd" }}
     >
-      {corners.map(({ pos, src, rotation, class: positionClass }) => (
+      {corners.map(({ pos, src, class: positionClass }) => (
         <motion.img
           key={pos}
           src={src}
           alt={`${pos} corner`}
           className={`absolute w-7 h-7 transition-opacity duration-200 ${positionClass}`}
-          rotate={rotation}
           initial="initial"
           animate={isHovered ? "pulse" : "initial"}
           variants={pulseVariants}
