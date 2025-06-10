@@ -69,7 +69,7 @@ export default function Home() {
         </div>
       </div>
 
-      <h1 id="portfolio" className="text-4xl pt-46 pb-6 px-48">
+      <h1 id="portfolio" className="text-4xl pt-46 pb-6 ml-32 lg:ml-48">
         Portfolio
       </h1>
       <ImagesGallery />

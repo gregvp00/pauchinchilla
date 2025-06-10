@@ -19,7 +19,7 @@ export default function MobileNav() {
       </SheetTrigger>
 
       <SheetContent side="left">
-        <div className="flex flex-col items-start">
+        <div className="flex flex-col items-start gap-4 p-4">
           {navItems.map((item, index) => (
             <Link key={index} href={item.href} passHref>
               <Button
