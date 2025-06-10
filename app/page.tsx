@@ -47,20 +47,20 @@ export default function Home() {
           {/* Texto descriptivo */}
           <div className="w-full md:w-2/3 text-zinc-800 dark:text-zinc-200 text-lg leading-relaxed">
             <p>
-              Hey there! I'm Paula Chinchilla — 21 years old and powered by
+              Hey there! I&apos;m Paula Chinchilla — 21 years old and powered by
               pixels, colors, and wild ideas.
             </p>
             <p className="mt-4">
-              I'm currently studying Illustration at EASD Valencia, where I dive
-              deep into the worlds of character design and pixel art.
+              I&apos;m currently studying Illustration at EASD Valencia, where I
+              dive deep into the worlds of character design and pixel art.
             </p>
             <p>
-              Lately, I've also been exploring the 3D realm, crafting low-poly
-              models in Blender and having a blast doing it.
+              Lately, I&apos;ve also been exploring the 3D realm, crafting
+              low-poly models in Blender and having a blast doing it.
             </p>
             <p className="mt-2">
               Curious? Inspired? Just bored? Feel free to explore my work
-              through my portfolio, I'd love to share my little creative
+              through my portfolio, I&apos;d love to share my little creative
               universe with you!
             </p>
           </div>
