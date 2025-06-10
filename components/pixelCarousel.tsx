@@ -1,3 +1,4 @@
+// pages/ImagesGallery.tsx o donde uses esta página
 import { AnimatedArticle } from "@/components/animatedArticle";
 import imagesData from "@/data/imagesData";
 import { Carousel } from "@/components/carousel";
@@ -13,7 +14,7 @@ export default function ImagesGallery() {
       ...(Array.isArray(concept?.complementary)
         ? concept.complementary
         : [concept?.complementary]),
-    ].filter((item): item is string => Boolean(item)) // <- filtro aquí
+    ].filter((item): item is string => Boolean(item))
   );
 
   const racoonItems = buildImageCarouselItems(
@@ -22,7 +23,7 @@ export default function ImagesGallery() {
       ...(Array.isArray(lowpoly3d?.complementary)
         ? lowpoly3d.complementary
         : [lowpoly3d?.complementary]),
-    ].filter((item): item is string => Boolean(item)) // <- y aquí
+    ].filter((item): item is string => Boolean(item))
   );
 
   return (

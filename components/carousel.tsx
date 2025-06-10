@@ -61,7 +61,7 @@ export const Carousel = ({ items }: CarouselProps) => {
         {items.map((item: ItemProps) => (
           <SwiperSlide key={item.id}>
             <div
-              className={`h-64 flex items-center justify-center text-white text-xl font-bold ${item.color}`}
+              className={`h-64 w-full relative flex items-center justify-center overflow-hidden ${item.color}`}
             >
               {item.content}
             </div>

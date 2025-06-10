@@ -45,12 +45,23 @@ export default function Home() {
           </div>
 
           {/* Texto descriptivo */}
-          <div className="w-full md:w-1/2 pt-7 text-zinc-800 dark:text-zinc-200 text-lg leading-relaxed">
-            <p>¡Hola! Bli blib blu bi blub! Soy Elfa Llorona</p>
+          <div className="w-full md:w-2/3 text-zinc-800 dark:text-zinc-200 text-lg leading-relaxed">
+            <p>
+              Hey there! I'm Paula Chinchilla — 21 years old and powered by
+              pixels, colors, and wild ideas.
+            </p>
             <p className="mt-4">
-              Blub blub blub blub. Bli blib blu bi blub! Blub blub blub blub
-              blub. Bli blib blu bi blub! Blub blub blub blub blub. Bla bla ble
-              bli blow
+              I'm currently studying Illustration at EASD Valencia, where I dive
+              deep into the worlds of character design and pixel art.
+            </p>
+            <p>
+              Lately, I've also been exploring the 3D realm, crafting low-poly
+              models in Blender and having a blast doing it.
+            </p>
+            <p className="mt-2">
+              Curious? Inspired? Just bored? Feel free to explore my work
+              through my portfolio, I'd love to share my little creative
+              universe with you!
             </p>
           </div>
         </div>
