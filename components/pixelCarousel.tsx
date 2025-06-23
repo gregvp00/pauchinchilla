@@ -1,13 +1,9 @@
 // pages/ImagesGallery.tsx o donde uses esta página
 import { AnimatedArticle } from "@/components/animatedArticle";
-import imagesData from "@/data/imagesData";
 import { Carousel } from "@/components/carousel";
 import { buildImageCarouselItems } from "@/components/carouselHelpers";
 
 export default function ImagesGallery() {
-  const concept = imagesData.conceptdsgn[3];
-  const lowpoly3d = imagesData.lowpoly3d[3];
-
   const avilioItems = buildImageCarouselItems([
     "/concept/avilio/widethumb.jpg", // Ruta relativa desde public
   ]);
