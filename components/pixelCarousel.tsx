@@ -8,14 +8,9 @@ export default function ImagesGallery() {
   const concept = imagesData.conceptdsgn[3];
   const lowpoly3d = imagesData.lowpoly3d[3];
 
-  const avilioItems = buildImageCarouselItems(
-    [
-      concept?.src,
-      ...(Array.isArray(concept?.complementary)
-        ? concept.complementary
-        : [concept?.complementary]),
-    ].filter((item): item is string => Boolean(item))
-  );
+  const avilioItems = buildImageCarouselItems([
+    "/concept/avilio/widethumb.jpg", // Ruta relativa desde public
+  ]);
 
   const racoonItems = buildImageCarouselItems(
     [

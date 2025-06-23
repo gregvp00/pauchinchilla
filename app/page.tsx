@@ -2,7 +2,7 @@ import Nav from "@/components/siteHeader";
 import { Inconsolata } from "next/font/google";
 import ImagesGallery from "@/components/imagesGallery";
 import PixelCarousel from "@/components/pixelCarousel";
-import Image from "next/image"; // <-- Importar Image
+import Image from "next/image";
 
 const roboto = Inconsolata({ subsets: ["latin"], weight: "400" });
 
