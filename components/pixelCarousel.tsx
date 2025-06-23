@@ -12,14 +12,10 @@ export default function ImagesGallery() {
     "/concept/avilio/widethumb.jpg", // Ruta relativa desde public
   ]);
 
-  const racoonItems = buildImageCarouselItems(
-    [
-      lowpoly3d?.src,
-      ...(Array.isArray(lowpoly3d?.complementary)
-        ? lowpoly3d.complementary
-        : [lowpoly3d?.complementary]),
-    ].filter((item): item is string => Boolean(item))
-  );
+  const racoonItems = buildImageCarouselItems([
+    "/3dlowpoly/racoon/Final Project.gif",
+    "/3dlowpoly/racoon/Final Project.gif", // Ruta relativa desde public
+  ]);
 
   return (
     <div className="pt-24 p-6 mb-11">

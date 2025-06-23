@@ -1,14 +1,16 @@
 import Nav from "@/components/siteHeader";
 import { Inconsolata } from "next/font/google";
 import ImagesGallery from "@/components/imagesGallery";
+import Contact from "@/components/contact";
+import Footer from "@/components/footer";
 import PixelCarousel from "@/components/pixelCarousel";
 import Image from "next/image";
 
-const roboto = Inconsolata({ subsets: ["latin"], weight: "400" });
+const inconsolata = Inconsolata({ subsets: ["latin"], weight: "400" });
 
 export default function Home() {
   return (
-    <div className={`${roboto.className} bg-white`}>
+    <div className={`${inconsolata.className} bg-white`}>
       <Nav />
       <div className="relative">
         <PixelCarousel />
@@ -73,6 +75,8 @@ export default function Home() {
         Portfolio
       </h1>
       <ImagesGallery />
+      <Contact />
+      <Footer />
     </div>
   );
 }

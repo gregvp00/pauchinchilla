@@ -39,7 +39,7 @@ export default function SiteHeader() {
       transition={{ type: "spring", stiffness: 300, damping: 30 }}
       className="fixed top-0 left-0 right-0 z-50 w-full"
     >
-      <div className="flex justify-normal md:justify-center items-center h-14 px-4">
+      <div className="flex justify-normal md:justify-center items-center h-14">
         <MainNav />
         <MobileNav />
       </div>
