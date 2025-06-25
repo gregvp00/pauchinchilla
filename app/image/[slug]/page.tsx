@@ -118,8 +118,8 @@ export default function ImageDetailPage() {
                   No additional information at the moment.
                 </p>
                 <p className="leading-relaxed text-gray-700">
-                  But if you're interested, feel free to reach me via socials
-                  and I will comment on the whole process.
+                  But if you&apos;re interested, feel free to reach me via
+                  socials and I will comment on the whole process.
                 </p>
               </div>
             </aside>
