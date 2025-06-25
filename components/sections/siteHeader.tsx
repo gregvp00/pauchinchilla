@@ -2,8 +2,8 @@
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import MainNav from "./mainNav";
-import MobileNav from "./mobileNav";
+import MainNav from "@/components/sections/mainNav";
+import MobileNav from "@/components/sections/mobileNav";
 
 function useScrollDirection() {
   const [scrollDir, setScrollDir] = useState<"up" | "down">("up");

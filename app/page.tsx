@@ -1,8 +1,8 @@
-import Nav from "@/components/siteHeader";
+import Nav from "@/components/sections/siteHeader";
 import { Inconsolata } from "next/font/google";
 import ImagesGallery from "@/components/imagesGallery";
 import Contact from "@/components/contact";
-import Footer from "@/components/footer";
+import Footer from "@/components/sections/footer";
 import PixelCarousel from "@/components/pixelCarousel";
 import Image from "next/image";
 
@@ -10,7 +10,7 @@ const inconsolata = Inconsolata({ subsets: ["latin"], weight: "400" });
 
 export default function Home() {
   return (
-    <div className={`${inconsolata.className} bg-white`}>
+    <div className={`${inconsolata.className} bg-gray-50`}>
       <Nav />
       <div className="relative">
         <PixelCarousel />

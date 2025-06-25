@@ -10,7 +10,7 @@ import "swiper/css/navigation";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 
-import { RippleButton } from "./rippleButton";
+import { RippleButton } from "@/components/rippleButton";
 import Image from "next/image"; // <-- Importar Image
 
 interface ItemProps {
@@ -28,7 +28,7 @@ export const Carousel = ({ items }: CarouselProps) => {
   const nextRef = useRef<HTMLButtonElement>(null);
 
   return (
-    <div className="relative w-full max-w-md mx-auto">
+    <div className="relative w-full mx-auto">
       {/* Swiper */}
       <Swiper
         modules={[Navigation, Pagination]}

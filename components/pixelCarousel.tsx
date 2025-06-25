@@ -16,18 +16,22 @@ export default function ImagesGallery() {
   return (
     <div className="pt-24 p-6 mb-11">
       <h1 className="text-2xl font-bold mb-4 text-center">What&apos;s new</h1>
-      <div className="flex flex-col lg:flex-row gap-6 items-center justify-center">
-        <AnimatedArticle
-          title="Avilio"
-          description="Character design"
-          content={<Carousel items={avilioItems} />}
-        />
+      <div className="flex flex-col xl:flex-row gap-6 items-center justify-center">
+        <div className="w-full max-w-xl">
+          <AnimatedArticle
+            title="Avilio"
+            description="Character design"
+            content={<Carousel items={avilioItems} />}
+          />
+        </div>
 
-        <AnimatedArticle
-          title="Racoon forest"
-          description="Lowpoly 3D model"
-          content={<Carousel items={racoonItems} />}
-        />
+        <div className="w-full max-w-xl">
+          <AnimatedArticle
+            title="Racoon forest"
+            description="Lowpoly 3D model"
+            content={<Carousel items={racoonItems} />}
+          />
+        </div>
       </div>
     </div>
   );
