@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
 import { FaInstagram, FaTiktok } from "react-icons/fa";
-import { MdMail } from "react-icons/md";
 
 export default function Footer() {
   return (
