@@ -5,9 +5,9 @@ export default function Contact() {
     <>
       <div
         id="contact"
-        className="relative bg-[#ffaa5e] py-12 border-y-8 my-24 border-[#ffaa5e]"
+        className="relative py-12 border-y-8 my-24 border-[#4a5565]"
         style={{
-          boxShadow: "inset 0 0 0 7px #ffffff",
+          boxShadow: "inset 0 0 0 7px #f9fafb",
         }}
       >
         <h1 className="text-6xl font-bold tracking-widest absolute -top-14 left-1/2 px-4 text-shadow-lg -translate-x-1/2">
@@ -18,11 +18,11 @@ export default function Contact() {
             className="w-full h-auto absolute top-0 left-0 z-0"
           >
             <path
-              stroke="#ffaa5e"
+              stroke="#4a5565"
               d="M1 0h38M0 1h1M39 1h1M0 2h1M39 2h1M0 3h1M39 3h1M0 4h1M39 4h1M0 5h1M39 5h1M0 6h1M39 6h1M0 7h1M39 7h1M0 8h1M39 8h1M0 9h1M39 9h1M0 10h1M39 10h1M0 11h1M39 11h1M0 12h1M39 12h1M0 13h1M39 13h1M0 14h1M39 14h1M0 15h1M39 15h1M0 16h1M39 16h1M0 17h1M39 17h1M0 18h1M39 18h1M0 19h1M39 19h1M0 20h1M39 20h1M0 21h1M39 21h1M0 22h1M39 22h1M0 23h1M39 23h1M0 24h1M39 24h1M0 25h1M39 25h1M0 26h1M39 26h1M0 27h1M39 27h1M0 28h1M39 28h1M0 29h1M39 29h1M0 30h1M39 30h1M0 31h1M39 31h1M0 32h1M39 32h1M0 33h1M39 33h1M0 34h1M39 34h1M0 35h1M39 35h1M0 36h1M39 36h1M0 37h1M39 37h1M0 38h1M39 38h1M1 39h38"
             />
             <path
-              stroke="#ffffff"
+              stroke="#f9fafb"
               d="M1 1h38M1 2h38M1 3h38M1 4h38M1 5h38M1 6h38M1 7h38M1 8h38M1 9h38M1 10h38M1 11h38M1 12h38M1 13h38M1 14h38M1 15h38M1 16h38M1 17h38M1 18h38M1 19h38M1 20h38M1 21h38M1 22h38M1 23h38M1 24h38M1 25h38M1 26h38M1 27h38M1 28h38M1 29h38M1 30h38M1 31h38M1 32h38M1 33h38M1 34h38M1 35h38M1 36h38M1 37h38M1 38h38"
             />
           </svg>

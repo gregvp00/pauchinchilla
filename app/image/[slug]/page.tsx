@@ -111,14 +111,15 @@ export default function ImageDetailPage() {
             </div>
             <aside className="h-fit bg-white p-6 shadow-lg lg:col-span-1 lg:sticky lg:top-24">
               <h2 className="mb-4 border-b pb-3 text-2xl font-semibold">
-                Comentarios
+                😅 Uh oh
               </h2>
               <div className="flex flex-col gap-4">
                 <p className="leading-relaxed text-gray-700">
-                  Comentario de ejemplo 1.
+                  No additional information at the moment.
                 </p>
                 <p className="leading-relaxed text-gray-700">
-                  Comentario de ejemplo 2.
+                  But if you're interested, feel free to reach me via socials
+                  and I will comment on the whole process.
                 </p>
               </div>
             </aside>

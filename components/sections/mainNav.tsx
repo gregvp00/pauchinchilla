@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { navItems } from "@/data/navItems";
 import { MotionSlot } from "@/components/motion";
+import Image from "next/image";
 
 export default function MainNav() {
   return (
@@ -18,7 +19,7 @@ export default function MainNav() {
               height: 44,
             }}
           >
-            <img
+            <Image
               src="/logo.svg"
               alt="Logo"
               width={38}

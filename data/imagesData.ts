@@ -103,6 +103,11 @@ const imagesData: ImagesData = {
       src: "/comp/rotoscoping-thumb.jpg",
       alt: "Rotoscoping",
     },
+    {
+      src: "/illustration/kitt/kitt-thumb.png",
+      alt: "Kitt",
+      complementary: ["/illustration/kitt/kittFinal.png"],
+    },
   ],
   conceptdsgn: [
     {

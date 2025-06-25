@@ -22,7 +22,7 @@ export default function ImagesGallery() {
     const images: ImageItem[] = imagesData[category] || [];
 
     return (
-      <div className="grid grid-cols-2 lg:grid-cols-3 gap-14 mt-12 max-w-[1200px] mx-auto w-full">
+      <div className="grid grid-cols-2 lg:grid-cols-3 gap-14 mt-12 max-w-[1200px] mx-auto w-full mb-12">
         {images.map((img, index) => (
           <motion.div
             key={index}
