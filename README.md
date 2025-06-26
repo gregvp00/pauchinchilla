@@ -1,1 +1,1 @@
-## This project is private
+## This project is currently in development
