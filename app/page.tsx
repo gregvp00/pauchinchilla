@@ -8,11 +8,11 @@ import Footer from "@/components/sections/footer";
 import PixelCarousel from "@/components/pixelCarousel";
 import Image from "next/image";
 import { useSectionObserver } from "@/app/hooks/useSectionObserver";
+import { SECTION_IDS } from "@/lib/sectionIds"; // <- import from new file
 
 const inconsolata = Inconsolata({ subsets: ["latin"], weight: "400" });
 
-export const SECTION_IDS = ["home", "portfolio", "contact"];
-
+// remove export from here (no export const SECTION_IDS)
 export default function HomePage() {
   const activeSection = useSectionObserver(SECTION_IDS);
 

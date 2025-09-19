@@ -8,11 +8,7 @@ interface SideBarProps {
   activeSection: string | null;
 }
 
-const SideBar: React.FC<SideBarProps> = ({
-  isHovered,
-  hoveredSection,
-  activeSection,
-}) => {
+const SideBar: React.FC<SideBarProps> = ({ hoveredSection, activeSection }) => {
   // El texto a mostrar: la sección con hover tiene prioridad.
   // Si no hay hover, se muestra la sección activa actual.
   const displayText = hoveredSection || activeSection;

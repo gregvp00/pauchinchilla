@@ -52,7 +52,7 @@ export default function ImageDetailPage() {
 
   return (
     <div className={inconsolata.className}>
-      <Nav />
+      <Nav activeSection={null} />
       <main className="min-h-screen bg-gray-50 pt-16 pb-12">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <button

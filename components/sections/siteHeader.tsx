@@ -37,7 +37,6 @@ export default function SiteHeader({
     if (mq.addEventListener) {
       mq.addEventListener("change", update);
     } else {
-      // @ts-ignore - fallback for older browsers
       mq.addListener(update);
     }
 
@@ -45,7 +44,6 @@ export default function SiteHeader({
       if (mq.removeEventListener) {
         mq.removeEventListener("change", update);
       } else {
-        // @ts-ignore - fallback for older browsers
         mq.removeListener(update);
       }
     };
