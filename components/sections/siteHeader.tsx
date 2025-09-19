@@ -1,48 +1,101 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
-import MainNav from "@/components/sections/mainNav";
-import MobileNav from "@/components/sections/mobileNav";
+import { useEffect, useState } from "react";
+import NewNav from "@/components/sections/newNav";
+import NewNavMobile from "@/components/sections/newNavMobile";
+import SideBar from "@/components/sections/sideBar";
 
-function useScrollDirection() {
-  const [scrollDir, setScrollDir] = useState<"up" | "down">("up");
+export default function SiteHeader({
+  activeSection,
+}: {
+  activeSection: string | null;
+}) {
+  const [isNavHovered, setIsNavHovered] = useState(false);
+  const [hoveredSection, setHoveredSection] = useState<string | null>(null);
+  const [isMobile, setIsMobile] = useState(false);
+
+  const handleNavClick = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const handleHoverSection = (sectionId: string | null) => {
+    setHoveredSection(sectionId);
+  };
 
   useEffect(() => {
-    let lastScrollY = window.scrollY;
+    const mq = window.matchMedia("(max-width: 1280px)");
+    const update = (e: MediaQueryListEvent | MediaQueryList) =>
+      setIsMobile(e.matches);
 
-    const onScroll = () => {
-      const currentScrollY = window.scrollY;
+    // set initial state
+    update(mq);
 
-      if (currentScrollY > lastScrollY && currentScrollY > 50) {
-        setScrollDir("down");
-      } else if (currentScrollY < lastScrollY) {
-        setScrollDir("up");
+    // add listener (handle both modern and older APIs)
+    if (mq.addEventListener) {
+      mq.addEventListener("change", update);
+    } else {
+      // @ts-ignore - fallback for older browsers
+      mq.addListener(update);
+    }
+
+    return () => {
+      if (mq.removeEventListener) {
+        mq.removeEventListener("change", update);
+      } else {
+        // @ts-ignore - fallback for older browsers
+        mq.removeListener(update);
       }
-      lastScrollY = currentScrollY;
     };
-
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  return scrollDir;
-}
-
-export default function SiteHeader() {
-  const scrollDirection = useScrollDirection();
-
   return (
-    <motion.header
-      initial={{ y: 0 }}
-      animate={{ y: scrollDirection === "down" ? "-100%" : "0%" }}
-      transition={{ type: "spring", stiffness: 300, damping: 30 }}
-      className="fixed top-0 left-0 right-0 z-50 w-full"
+    <header
+      className={`fixed top-0 ${
+        isMobile ? "right-0" : "left-0"
+      } z-50 w-auto h-20 flex items-center p-4`}
+      // disable hover handlers on mobile to avoid accidental triggers
+      onMouseEnter={!isMobile ? () => setIsNavHovered(true) : undefined}
+      onMouseLeave={
+        !isMobile
+          ? () => {
+              setIsNavHovered(false);
+              setHoveredSection(null);
+            }
+          : undefined
+      }
     >
-      <div className="flex justify-normal md:justify-center items-center h-14">
-        <MainNav />
-        <MobileNav />
+      <div className="relative z-20 top-8 w-auto">
+        {isMobile ? (
+          <NewNavMobile
+            onNavClick={handleNavClick}
+            onHoverSection={handleHoverSection}
+            activeSection={activeSection}
+            isNavHovered={isNavHovered}
+            hoveredSection={hoveredSection}
+          />
+        ) : (
+          <>
+            <div className="absolute left-26 top-16 z-10">
+              <SideBar
+                isHovered={isNavHovered}
+                hoveredSection={hoveredSection}
+                activeSection={activeSection}
+              />
+            </div>
+
+            {/* Contenedor para NewNav (encima) */}
+            <div className="relative z-20 top-7 w-auto">
+              <NewNav
+                onNavClick={handleNavClick}
+                onHoverSection={handleHoverSection}
+              />
+            </div>
+          </>
+        )}
       </div>
-    </motion.header>
+    </header>
   );
 }

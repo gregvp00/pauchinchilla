@@ -1,14 +1,14 @@
-// pages/ImagesGallery.tsx o donde uses esta página
+// pages/ImagesGallery.tsx
 import { AnimatedArticle } from "@/components/animatedArticle";
 import { Carousel } from "@/components/carousel";
 import { buildImageCarouselItems } from "@/components/carouselHelpers";
 
 export default function ImagesGallery() {
-  const avilioItems = buildImageCarouselItems([
+  const firstItems = buildImageCarouselItems([
     "/concept/avilio/widethumb.jpg", // Ruta relativa desde public
   ]);
 
-  const racoonItems = buildImageCarouselItems([
+  const secondItems = buildImageCarouselItems([
     "/3dlowpoly/racoon/Final Project.gif",
     "/3dlowpoly/racoon/Final Project.gif", // Ruta relativa desde public
   ]);
@@ -19,9 +19,9 @@ export default function ImagesGallery() {
       <div className="flex flex-col xl:flex-row gap-6 items-center justify-center">
         <div className="w-full max-w-xl">
           <AnimatedArticle
-            title="Avilio"
+            title="Velina"
             description="Character design"
-            content={<Carousel items={avilioItems} />}
+            content={<Carousel items={firstItems} />}
           />
         </div>
 
@@ -29,7 +29,7 @@ export default function ImagesGallery() {
           <AnimatedArticle
             title="Racoon forest"
             description="Lowpoly 3D model"
-            content={<Carousel items={racoonItems} />}
+            content={<Carousel items={secondItems} />}
           />
         </div>
       </div>

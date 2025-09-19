@@ -17,7 +17,7 @@ export interface ImagesData {
 const imagesData: ImagesData = {
   illustration: [
     {
-      src: "/comp/Nini-thumb.png",
+      src: "/comp/Nini-thumb.webp",
       alt: "Nini",
       complementary: [
         "/illustration/inkprint/NiniPrint.jpeg",
@@ -27,7 +27,7 @@ const imagesData: ImagesData = {
       ],
     },
     {
-      src: "/comp/Ekko-thumb.png",
+      src: "/comp/Ekko-thumb.webp",
       alt: "Ekko",
       complementary: [
         "/illustration/ekko/EkkoFinal.jpg",
@@ -40,7 +40,7 @@ const imagesData: ImagesData = {
       ],
     },
     {
-      src: "/comp/Feefal-thumb.png",
+      src: "/comp/Feefal-thumb.webp",
       alt: "Feefal",
       complementary: [
         "/illustration/feefal/FeefalFinal.jpeg",
@@ -53,7 +53,7 @@ const imagesData: ImagesData = {
       ],
     },
     {
-      src: "/comp/Dewdrop-thumb.png",
+      src: "/comp/Dewdrop-thumb.webp",
       alt: "Dewdrop",
       complementary: [
         "/illustration/dewdrop/MushroomChalk.jpeg",
@@ -63,7 +63,7 @@ const imagesData: ImagesData = {
       ],
     },
     {
-      src: "/comp/jinx-thumb.jpg",
+      src: "/comp/jinx-thumb.webp",
       alt: "Jinx",
       complementary: [
         "/illustration/jinx/jinxSize.jpg",
@@ -72,7 +72,7 @@ const imagesData: ImagesData = {
       ],
     },
     {
-      src: "/comp/comic-thumb.jpg",
+      src: "/comp/comic-thumb.webp",
       alt: "Comic",
       complementary: [
         "/illustration/comic/Comic.jpeg",
@@ -80,7 +80,7 @@ const imagesData: ImagesData = {
       ],
     },
     {
-      src: "/comp/cards-thumb.jpg",
+      src: "/comp/cards-thumb.webp",
       alt: "Cards",
       complementary: [
         "/illustration/cards/Cartas 1.png",
@@ -100,18 +100,18 @@ const imagesData: ImagesData = {
       ],
     },
     {
-      src: "/comp/rotoscoping-thumb.jpg",
+      src: "/comp/rotoscoping-thumb.webp",
       alt: "Rotoscoping",
     },
     {
-      src: "/illustration/kitt/kitt-thumb.png",
+      src: "/comp/kitt-thumb.webp",
       alt: "Kitt",
       complementary: ["/illustration/kitt/kittFinal.png"],
     },
   ],
   conceptdsgn: [
     {
-      src: "/comp/frog-thumb.jpg",
+      src: "/comp/frog-thumb.webp",
       alt: "Frog",
       complementary: [
         "/concept/frog/frog-photo1.jpg",
@@ -123,7 +123,7 @@ const imagesData: ImagesData = {
       ],
     },
     {
-      src: "/comp/chinchilla-thumb.jpg",
+      src: "/comp/chinchilla-thumb.webp",
       alt: "Chinchilla",
       complementary: [
         "/concept/chinchilla/ChinchillaFoodSketch3.jpeg",
@@ -132,7 +132,7 @@ const imagesData: ImagesData = {
       ],
     },
     {
-      src: "/comp/AWF-thumb.png",
+      src: "/comp/AWF-thumb.webp",
       alt: "AWF",
       complementary: [
         "/concept/awf/Pegatinas.jpg",
@@ -141,7 +141,7 @@ const imagesData: ImagesData = {
       ],
     },
     {
-      src: "/comp/avilio-thumb.jpg",
+      src: "/comp/avilio-thumb.webp",
       alt: "Avilio",
       complementary: [
         "/concept/avilio/LabirinthyaMockup.jpeg",
@@ -159,7 +159,7 @@ const imagesData: ImagesData = {
   ],
   lowpoly3d: [
     {
-      src: "/comp/chameleon-thumb.jpg",
+      src: "/comp/chameleon-thumb.webp",
       alt: "Chameleon",
       complementary: [
         "/3dlowpoly/chameleon/Frontal (2).png",
@@ -181,7 +181,7 @@ const imagesData: ImagesData = {
       complementary: ["/3dlowpoly/beach/0062.png"],
     },
     {
-      src: "/comp/space-thumb.jpg",
+      src: "/comp/space-thumb.webp",
       alt: "Space",
       complementary: ["/3dlowpoly/space/0062.png"],
     },
@@ -191,7 +191,7 @@ const imagesData: ImagesData = {
       complementary: [],
     },
     {
-      src: "/comp/moon-thumb.jpg",
+      src: "/comp/moon-thumb.webp",
       alt: "Moon",
       complementary: ["/3dlowpoly/moon/Wallpaper Final.png"],
     },

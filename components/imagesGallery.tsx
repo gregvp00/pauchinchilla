@@ -22,7 +22,7 @@ export default function ImagesGallery() {
     const images: ImageItem[] = imagesData[category] || [];
 
     return (
-      <div className="grid grid-cols-2 lg:grid-cols-3 gap-14 mt-12 max-w-[1200px] mx-auto w-full mb-12">
+      <div className="grid grid-cols-2 lg:grid-cols-3 lg:gap-14 gap-6 mt-12 max-w-[1200px] mx-auto w-full mb-12">
         {images.map((img, index) => (
           <motion.div
             key={index}
@@ -58,26 +58,26 @@ export default function ImagesGallery() {
   return (
     <>
       {/* Illustration */}
-      <h2 className="absolute left-1/10 2xl:left-8 text-xl font-bold 2xl:max-w-1/10">
+      <h2 className="absolute left-1/2 -translate-x-1/2 text-xl font-bold whitespace-nowrap">
         Illustration
       </h2>
-      <div className="w-4/5 flex gap-6 border-t-1 border-black max-w-[1600px] mx-auto mb-10">
+      <div className="md:w-10/12 w-11/12 flex gap-6 border-t-1 border-black max-w-[1600px] mx-auto mb-10">
         {renderImages("illustration")}
       </div>
 
       {/* Concept */}
-      <h2 className="absolute left-1/10 2xl:left-8 text-xl font-bold 2xl:max-w-1/10">
+      <h2 className="absolute left-1/2 -translate-x-1/2  text-xl font-bold whitespace-nowrap">
         Concept & Visual Development
       </h2>
-      <div className="w-4/5 flex gap-6 border-t-1 border-black max-w-[1600px] mx-auto mb-10">
+      <div className="md:w-10/12 w-11/12 flex gap-6 border-t-1 border-black max-w-[1600px] mx-auto mb-10">
         {renderImages("conceptdsgn")}
       </div>
 
       {/* Lowpoly */}
-      <h2 className="absolute left-1/10 2xl:left-8 text-xl font-bold 2xl:max-w-1/10">
+      <h2 className="absolute left-1/2 -translate-x-1/2  text-xl font-bold whitespace-nowrap">
         3D & Lowpoly
       </h2>
-      <div className="w-4/5 flex gap-6 border-t-1 border-black max-w-[1600px] mx-auto mb-10">
+      <div className="md:w-10/12 w-11/12 flex gap-6 border-t-1 border-black max-w-[1600px] mx-auto mb-10">
         {renderImages("lowpoly3d")}
       </div>
     </>

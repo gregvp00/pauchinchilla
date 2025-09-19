@@ -125,6 +125,7 @@ export const Carousel = ({ items }: CarouselProps) => {
             <Image
               src="/pixel-corner.png"
               alt={`${pos} corner`}
+              sizes="24px"
               fill
               style={{ objectFit: "contain" }}
               priority
