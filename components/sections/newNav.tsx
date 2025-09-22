@@ -104,7 +104,7 @@ const NewNav: React.FC<NewNavProps> = ({ onNavClick, onHoverSection }) => {
       >
         <ButtonBackground color="#ac9b4e" />
         <span className=" w-6 h-6 group-hover:scale-110 transition-transform">
-          <Image src="/logoalt.svg" alt="Logo" width={50} height={50} />
+          <Image src="/logo.webp" alt="Logo" width={50} height={50} />
         </span>
       </button>
 

@@ -20,7 +20,7 @@ export default function MainNav() {
             }}
           >
             <Image
-              src="/logo.svg"
+              src="/logo.webp"
               alt="Logo"
               width={38}
               height={38}
