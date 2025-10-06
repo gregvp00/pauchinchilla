@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import SiteHeader from "@/components/sections/siteHeader";
 import { Inconsolata } from "next/font/google";
 import ImagesGallery from "@/components/imagesGallery";
@@ -16,15 +15,7 @@ const inconsolata = Inconsolata({ subsets: ["latin"], weight: "400" });
 // remove export from here (no export const SECTION_IDS)
 export default function HomePage() {
   const activeSection = useSectionObserver(SECTION_IDS);
-  const [loading, setLoading] = useState(false);
-  async function handleAction() {
-    setLoading(true);
-    try {
-      await fetch("/api/do-something");
-    } finally {
-      setLoading(false);
-    }
-  }
+
   return (
     <div className={`${inconsolata.className} bg-gray-50`}>
       <SiteHeader activeSection={activeSection} />

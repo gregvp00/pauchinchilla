@@ -72,7 +72,6 @@ const DiamondBackground = () => (
 );
 
 interface NewNavProps {
-  onNavClick: (sectionId: string) => void;
   onHoverSection: (sectionId: string | null) => void;
 
   // optional props (keep optional if component doesn't always need them)
@@ -80,7 +79,7 @@ interface NewNavProps {
   isNavHovered?: boolean;
   hoveredSection?: string | null;
 }
-const NewNav: React.FC<NewNavProps> = ({ onNavClick, onHoverSection }) => {
+const NewNav: React.FC<NewNavProps> = ({ onHoverSection }) => {
   const diamondStyle = {
     clipPath: "polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)",
   };

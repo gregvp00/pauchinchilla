@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { PhotoProvider, PhotoView } from "react-photo-view";
 import "react-photo-view/dist/react-photo-view.css";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 import { Tabs, TabsContent } from "@/components/animate-ui/components/tabs";
 import { MotionEffect } from "@/components/animate-ui/effects/motion-effect";
@@ -97,10 +98,12 @@ export default function ArtGalleryMasonry() {
                   }
                 >
                   {/* Plain <img> for natural heights (masonry) */}
-                  <img
+                  <Image
                     src={img.src}
                     alt={img.alt || "Imagen"}
                     loading={index < 6 ? "eager" : "lazy"}
+                    width="500"
+                    height="500"
                     style={{
                       width: "100%",
                       height: "auto",

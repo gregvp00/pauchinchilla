@@ -89,7 +89,6 @@ const MenuIcon = () => (
 );
 
 interface NewNavProps {
-  onNavClick: (sectionId: string) => void;
   onHoverSection: (sectionId: string | null) => void;
 
   // optional props (keep optional if component doesn't always need them)
@@ -98,7 +97,7 @@ interface NewNavProps {
   hoveredSection?: string | null;
 }
 
-const NewNav: React.FC<NewNavProps> = ({ onNavClick, onHoverSection }) => {
+const NewNav: React.FC<NewNavProps> = ({ onHoverSection }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const containerRef = useRef<HTMLDivElement | null>(null);
 
@@ -115,12 +114,6 @@ const NewNav: React.FC<NewNavProps> = ({ onNavClick, onHoverSection }) => {
       setIsExpanded(true);
       onHoverSection(null);
     }
-  };
-
-  const handleNavClick = (sectionId: string) => {
-    onNavClick(sectionId);
-    setIsExpanded(false);
-    onHoverSection(null);
   };
 
   // Close when clicking outside the nav

@@ -19,11 +19,6 @@ export default function SiteHeader({
   const [hideSidebarTitle, setHideSidebarTitle] = useState(false);
   const hideTimerRef = useRef<number | null>(null);
 
-  const handleNavClick = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) element.scrollIntoView({ behavior: "smooth" });
-  };
-
   const handleHoverSection = (sectionId: string | null) => {
     setHoveredSection(sectionId);
   };
@@ -111,7 +106,6 @@ export default function SiteHeader({
       <div className="relative z-20 top-8 w-auto">
         {isMobile ? (
           <NewNavMobile
-            onNavClick={handleNavClick}
             onHoverSection={handleHoverSection}
             activeSection={activeSection}
             isNavHovered={isNavHovered}
@@ -136,10 +130,7 @@ export default function SiteHeader({
             </motion.div>
 
             <div className="relative z-20 top-7 w-auto">
-              <NewNav
-                onNavClick={handleNavClick}
-                onHoverSection={handleHoverSection}
-              />
+              <NewNav onHoverSection={handleHoverSection} />
             </div>
           </>
         )}
