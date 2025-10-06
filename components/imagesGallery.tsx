@@ -39,6 +39,23 @@ export default function ImagesGallery() {
               stiffness: 100,
             }}
           >
+            {/* Badge "New" arriba-izquierda si img.new es true */}
+            {img.new && (
+              <motion.span
+                className="absolute top-3 left-3 z-10 pointer-events-none bg-red-500 backdrop-blur-sm px-2 py-1 rounded text-sm font-semibold tracking-wider"
+                initial={{ opacity: 0, scale: 0.85, y: -6 }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                transition={{
+                  delay: 0.15 + index * 0.05,
+                  duration: 0.28,
+                  type: "spring",
+                  stiffness: 220,
+                }}
+              >
+                <span className="text-white">New</span>
+              </motion.span>
+            )}
+
             <div className="absolute inset-0 bg-black opacity-10 pointer-events-none" />
             <Image
               src={img.src}

@@ -5,11 +5,11 @@ import { buildImageCarouselItems } from "@/components/carouselHelpers";
 
 export default function ImagesGallery() {
   const firstItems = buildImageCarouselItems([
-    "/concept/avilio/widethumb.jpg", // Ruta relativa desde public
+    "/concept/velina/widethumb.webp",
+    "/concept/velina/widethumb2.webp", // Ruta relativa desde public
   ]);
 
   const secondItems = buildImageCarouselItems([
-    "/3dlowpoly/racoon/Final Project.gif",
     "/3dlowpoly/racoon/Final Project.gif", // Ruta relativa desde public
   ]);
 

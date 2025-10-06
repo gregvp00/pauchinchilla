@@ -192,7 +192,8 @@ const NewNav: React.FC<NewNavProps> = ({ onNavClick, onHoverSection }) => {
           }`}
         >
           {/* Botón Home (Arriba) */}
-          <button
+          <Link
+            href="/#home"
             className={`${buttonBaseClasses} top-[13%] left-[31%] ${
               isExpanded ? "translate-y-0 scale-100" : "translate-y-8 scale-0"
             }`}
@@ -200,20 +201,24 @@ const NewNav: React.FC<NewNavProps> = ({ onNavClick, onHoverSection }) => {
               ...diamondStyle,
               transitionDelay: isExpanded ? "100ms" : "0ms",
             }}
-            onClick={() => handleNavClick("home")}
             onMouseEnter={() => onHoverSection("home")}
             onMouseLeave={() => onHoverSection(null)}
             aria-label="Go to home"
-            disabled={!isExpanded}
           >
             <ButtonBackground color="#ac9b4e" />
             <span className="w-6 h-6 group-hover:scale-110 transition-transform">
-              <Image src="/logo.webp" alt="Logo" width={50} height={50} />
+              <Image
+                src="/logohalloween.webp"
+                alt="Logo"
+                width={50}
+                height={50}
+              />
             </span>
-          </button>
+          </Link>
 
           {/* Botón Portfolio (Derecha) */}
-          <button
+          <Link
+            href="/#portfolio"
             className={`${buttonBaseClasses} right-[13%] top-[31%] ${
               isExpanded ? "translate-x-0 scale-100" : "-translate-x-8 scale-0"
             }`}
@@ -221,11 +226,9 @@ const NewNav: React.FC<NewNavProps> = ({ onNavClick, onHoverSection }) => {
               ...diamondStyle,
               transitionDelay: isExpanded ? "150ms" : "0ms",
             }}
-            onClick={() => handleNavClick("portfolio")}
             onMouseEnter={() => onHoverSection("portfolio")}
             onMouseLeave={() => onHoverSection(null)}
             aria-label="Go to portfolio"
-            disabled={!isExpanded}
           >
             <ButtonBackground color="#c95197" />
             <span className="text-[#eee3e9] w-5 h-5 ml-0.5 group-hover:scale-110 transition-transform">
@@ -240,7 +243,7 @@ const NewNav: React.FC<NewNavProps> = ({ onNavClick, onHoverSection }) => {
                 />
               </svg>
             </span>
-          </button>
+          </Link>
 
           {/* Botón Gallery (Abajo) */}
           <Link
@@ -274,7 +277,8 @@ const NewNav: React.FC<NewNavProps> = ({ onNavClick, onHoverSection }) => {
           </Link>
 
           {/* Botón Contact (Izquierda) */}
-          <button
+          <Link
+            href="/#contact"
             className={`${buttonBaseClasses} left-[13%] top-[31%] ${
               isExpanded ? "translate-x-0 scale-100" : "translate-x-8 scale-0"
             }`}
@@ -282,11 +286,9 @@ const NewNav: React.FC<NewNavProps> = ({ onNavClick, onHoverSection }) => {
               ...diamondStyle,
               transitionDelay: isExpanded ? "250ms" : "0ms",
             }}
-            onClick={() => handleNavClick("contact")}
             onMouseEnter={() => onHoverSection("contact")}
             onMouseLeave={() => onHoverSection(null)}
             aria-label="Go to contact"
-            disabled={!isExpanded}
           >
             <ButtonBackground color="#8a88ff" />
             <span className="text-[#eee3e9] w-5 h-5 group-hover:scale-110 transition-transform">
@@ -301,7 +303,7 @@ const NewNav: React.FC<NewNavProps> = ({ onNavClick, onHoverSection }) => {
                 />
               </svg>
             </span>
-          </button>
+          </Link>
         </div>
       </div>
     </div>

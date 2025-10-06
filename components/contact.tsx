@@ -1,4 +1,5 @@
 import { FaInstagram, FaTiktok } from "react-icons/fa";
+import ContactForm from "./form";
 import Link from "next/link";
 
 export default function Contact() {
@@ -107,6 +108,7 @@ export default function Contact() {
             </svg>
           </Link>
         </div>
+        <ContactForm />
         <div className="mt-6 h-auto w-96 mx-auto flex flex-col items-center justify-center">
           <h3>Or through my email:</h3>
           <Link

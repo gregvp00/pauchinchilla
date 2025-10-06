@@ -95,24 +95,24 @@ const NewNav: React.FC<NewNavProps> = ({ onNavClick, onHoverSection }) => {
     >
       <DiamondBackground />
       {/* Botón Home (Arriba) */}
-      <button
+      <Link
+        href="/#home"
         className={`${buttonBaseClasses} top-[13%]`}
         style={diamondStyle}
-        onClick={() => onNavClick("home")}
         onMouseEnter={() => onHoverSection("home")}
         aria-label="Go to home"
       >
         <ButtonBackground color="#ac9b4e" />
         <span className=" w-6 h-6 group-hover:scale-110 transition-transform">
-          <Image src="/logo.webp" alt="Logo" width={50} height={50} />
+          <Image src="/logohalloween.webp" alt="Logo" width={50} height={50} />
         </span>
-      </button>
+      </Link>
 
       {/* Botón Portfolio (Derecha) */}
-      <button
+      <Link
+        href="/#portfolio"
         className={`${buttonBaseClasses} right-[13%]`}
         style={diamondStyle}
-        onClick={() => onNavClick("portfolio")}
         onMouseEnter={() => onHoverSection("portfolio")}
         aria-label="Go to portfolio"
       >
@@ -130,7 +130,7 @@ const NewNav: React.FC<NewNavProps> = ({ onNavClick, onHoverSection }) => {
             />{" "}
           </svg>
         </span>
-      </button>
+      </Link>
 
       {/* Botón Gallery (Abajo) */}
       <Link
@@ -157,10 +157,10 @@ const NewNav: React.FC<NewNavProps> = ({ onNavClick, onHoverSection }) => {
       </Link>
 
       {/* Botón Contact (Izquierda) */}
-      <button
+      <Link
+        href="/#contact"
         className={`${buttonBaseClasses} left-[13%]`}
         style={diamondStyle}
-        onClick={() => onNavClick("contact")}
         onMouseEnter={() => onHoverSection("contact")}
         aria-label="Go to contact"
       >
@@ -178,7 +178,7 @@ const NewNav: React.FC<NewNavProps> = ({ onNavClick, onHoverSection }) => {
             />{" "}
           </svg>
         </span>
-      </button>
+      </Link>
     </div>
   );
 };

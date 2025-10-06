@@ -2,6 +2,7 @@
 
 export interface ImageItem {
   src: string;
+  new: boolean;
   alt?: string;
   complementary?: string[];
 }
@@ -12,12 +13,14 @@ export interface ImagesData {
   illustration: ImageItem[];
   conceptdsgn: ImageItem[];
   lowpoly3d: ImageItem[];
+  gallery: ImageItem[];
 }
 
 const imagesData: ImagesData = {
   illustration: [
     {
       src: "/comp/Nini-thumb.webp",
+      new: true,
       alt: "Nini",
       complementary: [
         "/illustration/inkprint/NiniPrint.jpeg",
@@ -28,6 +31,7 @@ const imagesData: ImagesData = {
     },
     {
       src: "/comp/Ekko-thumb.webp",
+      new: false,
       alt: "Ekko",
       complementary: [
         "/illustration/ekko/EkkoFinal.jpg",
@@ -41,6 +45,7 @@ const imagesData: ImagesData = {
     },
     {
       src: "/comp/Feefal-thumb.webp",
+      new: false,
       alt: "Feefal",
       complementary: [
         "/illustration/feefal/FeefalFinal.jpeg",
@@ -54,6 +59,7 @@ const imagesData: ImagesData = {
     },
     {
       src: "/comp/Dewdrop-thumb.webp",
+      new: false,
       alt: "Dewdrop",
       complementary: [
         "/illustration/dewdrop/MushroomChalk.jpeg",
@@ -64,6 +70,7 @@ const imagesData: ImagesData = {
     },
     {
       src: "/comp/jinx-thumb.webp",
+      new: false,
       alt: "Jinx",
       complementary: [
         "/illustration/jinx/jinxSize.jpg",
@@ -73,6 +80,7 @@ const imagesData: ImagesData = {
     },
     {
       src: "/comp/comic-thumb.webp",
+      new: false,
       alt: "Comic",
       complementary: [
         "/illustration/comic/Comic.jpeg",
@@ -81,6 +89,7 @@ const imagesData: ImagesData = {
     },
     {
       src: "/comp/cards-thumb.webp",
+      new: false,
       alt: "Cards",
       complementary: [
         "/illustration/cards/Cartas 1.png",
@@ -101,10 +110,12 @@ const imagesData: ImagesData = {
     },
     {
       src: "/comp/rotoscoping-thumb.webp",
+      new: false,
       alt: "Rotoscoping",
     },
     {
       src: "/comp/kitt-thumb.webp",
+      new: false,
       alt: "Kitt",
       complementary: ["/illustration/kitt/kittFinal.png"],
     },
@@ -112,6 +123,7 @@ const imagesData: ImagesData = {
   conceptdsgn: [
     {
       src: "/comp/frog-thumb.webp",
+      new: false,
       alt: "Frog",
       complementary: [
         "/concept/frog/frog-photo1.jpg",
@@ -124,6 +136,7 @@ const imagesData: ImagesData = {
     },
     {
       src: "/comp/chinchilla-thumb.webp",
+      new: false,
       alt: "Chinchilla",
       complementary: [
         "/concept/chinchilla/ChinchillaFoodSketch3.jpeg",
@@ -133,6 +146,7 @@ const imagesData: ImagesData = {
     },
     {
       src: "/comp/AWF-thumb.webp",
+      new: false,
       alt: "AWF",
       complementary: [
         "/concept/awf/Pegatinas.jpg",
@@ -142,6 +156,7 @@ const imagesData: ImagesData = {
     },
     {
       src: "/comp/avilio-thumb.webp",
+      new: false,
       alt: "Avilio",
       complementary: [
         "/concept/avilio/LabirinthyaMockup.jpeg",
@@ -156,10 +171,37 @@ const imagesData: ImagesData = {
         "/concept/avilio/Avilio sketch feo.png",
       ],
     },
+    {
+      src: "/comp/velina-thumb.webp",
+      new: true,
+      alt: "Velina",
+      complementary: [
+        "/concept/velina/Character Design Velina_Page_02.jpg",
+        "/concept/velina/Character Design Velina_Page_03.jpg",
+        "/concept/velina/Character Design Velina_Page_04.jpg",
+        "/concept/velina/Character Design Velina_Page_05.jpg",
+        "/concept/velina/Character Design Velina_Page_06.jpg",
+        "/concept/velina/Character Design Velina_Page_07.jpg",
+        "/concept/velina/Character Design Velina_Page_08.jpg",
+        "/concept/velina/Character Design Velina_Page_09.jpg",
+      ],
+    },
+    {
+      src: "/comp/collage-thumb.webp",
+      new: true,
+      alt: "Collage",
+      complementary: [
+        "/concept/collage/pollopescado.jpg",
+        "/concept/collage/_DSC1239.webp",
+        "/concept/collage/_DSC1241.webp",
+        "/concept/collage/_DSC1244.webp",
+      ],
+    },
   ],
   lowpoly3d: [
     {
       src: "/comp/chameleon-thumb.webp",
+      new: false,
       alt: "Chameleon",
       complementary: [
         "/3dlowpoly/chameleon/Frontal (2).png",
@@ -177,21 +219,69 @@ const imagesData: ImagesData = {
     },
     {
       src: "/3dlowpoly/beach/0Final.gif",
+      new: false,
       alt: "Beach",
       complementary: ["/3dlowpoly/beach/0062.png"],
     },
     {
       src: "/comp/space-thumb.webp",
+      new: false,
       alt: "Space",
       complementary: ["/3dlowpoly/space/0062.png"],
     },
     {
       src: "/3dlowpoly/racoon/Final Project.gif",
+      new: false,
       alt: "Racoon",
       complementary: [],
     },
     {
       src: "/comp/moon-thumb.webp",
+      new: false,
+      alt: "Moon",
+      complementary: ["/3dlowpoly/moon/Wallpaper Final.png"],
+    },
+  ],
+  gallery: [
+    {
+      src: "/comp/chameleon-thumb.webp",
+      new: false,
+      alt: "Chameleon",
+      complementary: [
+        "/3dlowpoly/chameleon/Frontal (2).png",
+        "/3dlowpoly/chameleon/Render 1 (2).png",
+        "/3dlowpoly/chameleon/Render 3.png",
+        "/3dlowpoly/chameleon/Side 1.png",
+        "/3dlowpoly/chameleon/Back.png",
+        "/3dlowpoly/chameleon/Side 2 (3).png",
+        "/3dlowpoly/chameleon/photo_2023-06-01_23-43-28.jpg",
+        "/3dlowpoly/chameleon/photo_2023-06-01_23-43-44.jpg",
+        "/3dlowpoly/chameleon/photo_2023-06-01_23-43-06.jpg",
+        "/3dlowpoly/chameleon/Chamileon sketch (1).png",
+        "/3dlowpoly/chameleon/Chamileon sketch.png",
+      ],
+    },
+    {
+      src: "/3dlowpoly/beach/0Final.gif",
+      new: false,
+      alt: "Beach",
+      complementary: ["/3dlowpoly/beach/0062.png"],
+    },
+    {
+      src: "/comp/space-thumb.webp",
+      new: false,
+      alt: "Space",
+      complementary: ["/3dlowpoly/space/0062.png"],
+    },
+    {
+      src: "/3dlowpoly/racoon/Final Project.gif",
+      new: false,
+      alt: "Racoon",
+      complementary: [],
+    },
+    {
+      src: "/comp/moon-thumb.webp",
+      new: false,
       alt: "Moon",
       complementary: ["/3dlowpoly/moon/Wallpaper Final.png"],
     },
