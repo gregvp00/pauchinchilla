@@ -6,7 +6,7 @@ import { Theme } from "@radix-ui/themes";
 
 export const metadata: Metadata = {
   title: "Paula Chinchilla",
-  description: "Portfolio de Paula Chinchilla",
+  description: "Portfolio from Paula Chinchilla",
 };
 
 export default function RootLayout({
@@ -16,6 +16,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <meta name="apple-mobile-web-app-title" content="PauChinchilla" />
+      </head>
       <body className="antialiased">
         <Theme>{children}</Theme>
       </body>

@@ -60,7 +60,7 @@ export default function ArtGalleryMasonry() {
             >
               {/* each item must be inline-block to participate in columns */}
               <div
-                className="inline-block w-full break-inside-avoid relative overflow-hidden rounded-md"
+                className="inline-block w-full break-inside-avoid relative overflow-hidden rounded-md bg-blue-950/10"
                 // if you want a subtle hover lift
                 style={{ cursor: "pointer" }}
               >
